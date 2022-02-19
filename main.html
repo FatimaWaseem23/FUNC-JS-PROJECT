@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<title>MY PROFILE PAGE!</title>
+
+	<link rel="stylesheet" type="text/css" href="STYLE1.css">
+
+    <link rel="stylesheet" type="text/css" href="STYLE2(form).css">
+
+	<link rel="stylesheet" type="text/css" href="pic.css">
+
+	<link rel="stylesheet" type="text/css" href="addremove.css ">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<body>
+	
+
+
+    <div class="form-popup" id="myForm" >
+        <form  class="form-container" >
+          
+      
+          
+			<label for="firstname">First_Name:</label>
+			<input type="text" id="firstname" name="firstname"><br><br>
+
+			<label for="lastname">Last_Name:</label>
+			<input type="text" id="lastname" name="lastname"><br><br>
+
+			<label for="phoneno">Phone_No:</label>
+			<input type="text" id="phoneno" name="phoneno"><br><br>
+
+			<label for="country">Country:</label>
+			<input type="text" id="country" name="country"><br><br>
+
+			<label for="country">DOB:</label>
+			<input type="text" id="dob" name="country"><br><br>
+
+
+		
+		   <button type="button" class="btn submit" onclick="changeDetails()">Submit Here!</button>
+          
+          <button type="button" class="btn cancel" onclick="closeForm()">Click to Close!</button>
+        </form>
+      </div>
+
+	<div class="profile-main">
+		<div class="profile-header">
+			<div class="addremovesection">
+				<div class="option">
+					<input type="text" name="bio" class="option" id="bios" size="50" placeholder="BIOGRAPHY">
+				</div>
+			<div class="controls">
+				<a href="#" id="add"><i class="fa fa-plus"></i>
+					ADD MORE</a>
+				<a href="#" id="remove"><i class="fa fa-plus"></i>
+						REMOVE</a>
+				<button type="button" class="btn submit" onclick="add()">Submit Here!</button>
+          
+			</div>
+			</div>
+			
+			<div class="user-detail">
+				<div class="user-image">
+					<div class="profile-pic-div">
+						<img src="image.jpg" id="photo">
+						<input type="file" id="file">
+						<label for="file" id="uploadBtn">Choose Photo</label>
+					  </div>
+					  
+                   
+				</div>
+				<div class="user-data">
+					<h2 id="name">Fatima Waseem</h2>
+					
+				
+					<p id="tagLine"><b>REAL || ROYAL </b></p>
+                    <p id="location" i class="fa fa-map-marker" aria-hidden="true"></i>  Islamabad | Pakistan
+					</p>
+				</div>
+				<div class="social-icons">
+					<br>
+                    <br>
+					<button onclick="edit()" class="msg-btn"><i class="far fa-edit" aria-hidden="true"></i> Want To Edit The Profile!</a>
+    
+                   
+                    </div>
+			</div>
+			
+				
+					<div class="bio-box">
+						<div class="heading">
+							<h2><u>ABOUT ME!</u></h2>
+						
+						</div>
+						<div class="desc" id="test">
+							<b>I am Fatima.I am currently doing my bachelor degree from FAST-NU Islamabad.I am a student of 6th semester and InShaAllah will be graduating in upcoming year 2022.My peronal hobbies includes exploring nature and poetry.I am much more interested into designing which also includes designing website,portal,graphic designing and much more.I also have a grasp over programmming languages such as C++/JAVA/PYTHON/HTML.
+                    My biggest wish is to become a person who has the urge & determination to serve the humanity because this world really needs it 
+						</b>
+				</div>
+					</div>
+					<div class="detail-box">
+						<p><u>Information!</u></p>
+						<ul class="ul-first">
+							<li>Date of Birth:-</li>
+							<li>District:-</li>
+							<li>Country:-</li>
+							<li>Contact No:-</li>
+						</ul>
+						<ul class="ul-second">
+							<li id="dob">23 October 1999</li>
+							<li>Islamabad</li>
+							<li>Pakistan</li>
+							<li>0325543899</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-panel-main">
+					<ul class="tabs">
+						<li class="tab-link current" data-tab="Basic-detail">Info</li>
+						<li class="tab-link" data-tab="Edu-detail">Education</li>
+						<li class="tab-link" data-tab="Portfolio">Profile</li>
+					</ul>
+				</div>
+		<div id="Edu-detail" class="tab-content">
+			<div class="Edu-box-main">
+				<div id="main">
+					<input type="button" id="btAdd" value="Add Degree" class="bt" />
+					<input type="button" id="btRemove" value="Remove Degree" class="bt" />
+					<input type="button" id="btRemoveAll" value="Remove All" class="bt" /><br />
+				</div>
+				 <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
+					<div class="Edu-box">
+						
+					<h5><span><u>GOALS!</u></span>
+						<p>It's useful to develop a personal portfolio of your own projects, such as those involving programming, building a website or carrying out tasks online as a moderator. Evidence of, for example, your initiative and ability in fixing bugs, improving functionality or building an app will help show your skills and interest. And I think I would love to learn MACHINE LEARNING and DIGITAL MARKETING in my upcoming future :')</p>
+	
+						
+						 </div>
+						 <div class="Edu-box">
+						 	<h5><span><u>Doing CS From Fast National Univeristy!</u></span> </h5>
+
+						 	<p><b> I am a Computer Science student. I will be graduating as a "Computer Scientist" in year 2021 InShaAllah.My career goal and objectives are simple as well as intereting. I wanted to be more towards website designing sites and graphic designing in my future because I have always been good at designing stuffs and designing websites using any source has always fascinates me.One of the most easiest and simplest way to design webpages is, I guess "html+css+java" scripting but we should not alwaysjuat tuck to one thing and always try to explore new materials for your better knowledge.I think in my opinion the best source for making websites of any kind is "WORD PRESS".It gives you plenty of options to design any website in multiple ways and I beleive, it is one of the most easiet way to be a good web-designers and to earn good amount of money from this online platform.</p>
+						 </div>
+					</div>
+				</div>
+				<div id="Portfolio" class="tab-content">
+					<div class="portfolio-box">
+						 <div class="input_fields_wrap">
+    <button class="add_field_button">Add Skill</button>
+    <div><input type="text" name="mytext[]"></div>
+						 </div>
+						<div class="portfolio-img-box">
+							<h3> </h3>
+							
+					</div>
+				</div>
+			
+		</div>
+		
+	</div>
+<script type="text/javascript">
+
+function add(){
+	var node = document.createElement("LI");
+  var textnode = document.createTextNode("Water");
+  node.appendChild(textnode);
+  document.getElementById("test").appendChild(node);
+}
+
+var option=document.getElementById('option');
+var add=document.getElementById('add');
+var remove=document.getElementById('remove');
+
+add.onclick=function()
+{	
+	var add=document.createElement('input');
+	add.setAttribute('type','text');
+	add.setAttribute('name','bio');
+	add.setAttribute('class','option');
+	add.setAttribute('siz','50');
+	add.setAttribute('placeholder','BIOGRAPHY');
+	option.appendChild(add);
+
+
+	
+
+}
+
+remove.onclick=function(){
+	var input_tags= option.getElementsByTagName('input');
+	if(input_tags.length>2){
+		option.removeChild(input_tags[(input_tags.length)-1]);
+	}
+}
+
+
+
+	$(document).ready(function(){
+		$('ul.tabs li').click(function(){
+			var tab_id = $(this).attr('data-tab');
+
+			$('ul.tabs li').removeClass('current');
+			$('.tab-content').removeClass('current');
+
+			$(this).addClass('current');
+			$("#"+tab_id).addClass('current');
+		});
+	});
+
+    function edit() {
+  document.getElementById("myForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function changeDetails(){
+
+
+
+    var n = document.getElementById("firstname").value;
+    var uLoc = document.getElementById("lastname").value;
+    var tline = document.getElementById("emailid").value;
+    var dob = document.getElementById("phoneno").value;
+	var va = document.getElementById("country").value;
+	var dob1= document.getElementById("dob").value;
+
+
+    if (n == "" || uLoc=="" || tline=="" || dob=="" || va=="" || dob1=="") {
+    alert("Please fill all fields!");
+  }
+else
+{
+  document.getElementById("name").innerHTML = n;
+
+
+  
+  document.getElementById("tagLine").innerHTML = uLoc;
+
+  
+  document.getElementById("location").innerHTML = tline;
+
+  document.getElementById("dob").innerHTML=dob;
+
+  closeForm();
+}
+}
+
+
+$("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
+
+const imgDiv = document.querySelector('.profile-pic-div');
+const img = document.querySelector('#photo');
+const file = document.querySelector('#file');
+const uploadBtn = document.querySelector('#uploadBtn');
+
+//if user hover on img div 
+
+imgDiv.addEventListener('mouseenter', function(){
+    uploadBtn.style.display = "block";
+});
+
+//if we hover out from img div
+
+imgDiv.addEventListener('mouseleave', function(){
+    uploadBtn.style.display = "none";
+});
+
+//lets work for image showing functionality when we choose an image to upload
+
+//when we choose a foto to upload
+
+file.addEventListener('change', function(){
+    //this refers to file
+    const choosedFile = this.files[0];
+
+    if (choosedFile) {
+
+        const reader = new FileReader(); //FileReader is a predefined function of JS
+
+        reader.addEventListener('load', function(){
+            img.setAttribute('src', reader.result);
+        });
+
+        reader.readAsDataURL(choosedFile);
+
+        //Allright is done
+
+    
+    }
+});
+$(document).ready(function() {
+
+var iCnt = 0;
+// CREATE A "DIV" ELEMENT AND DESIGN IT USING jQuery ".css()" CLASS.
+var container = $(document.createElement('div')).css({
+	padding: '10px', margin: '25px', width: '250px', border: '5px',
+	borderTopColor: '#999', borderBottomColor: '#999',
+	borderLeftColor: '#999', borderRightColor: '#999'
+});
+
+$('#btAdd').click(function() {
+	if (iCnt <= 19) {
+
+		iCnt = iCnt + 1;
+
+		// ADD TEXTBOX.
+		$(container).append('<input type=text class="input" id=tb' + iCnt + ' ' +
+			'value="Text Element ' + iCnt + '" />');
+
+		// SHOW SUBMIT BUTTON IF ATLEAST "1" ELEMENT HAS BEEN CREATED.
+		if (iCnt == 1) {
+			var divSubmit = $(document.createElement('div'));
+			$(divSubmit).append('<input type=button class="bt"' + 
+				'onclick="GetTextValue()"' + 
+					'id=btSubmit value=Submit />');
+		}
+
+		// ADD BOTH THE DIV ELEMENTS TO THE "main" CONTAINER.
+		$('#main').after(container, divSubmit);
+	}
+	// AFTER REACHING THE SPECIFIED LIMIT, DISABLE THE "ADD" BUTTON.
+	// (20 IS THE LIMIT WE HAVE SET)
+	else {      
+		$(container).append('<label>Reached the limit</label>'); 
+		$('#btAdd').attr('class', 'bt-disable'); 
+		$('#btAdd').attr('disabled', 'disabled');
+	}
+});
+
+// REMOVE ONE ELEMENT PER CLICK.
+$('#btRemove').click(function() {
+	if (iCnt != 0) { $('#tb' + iCnt).remove(); iCnt = iCnt - 1; }
+
+	if (iCnt == 0) { 
+		$(container)
+			.empty() 
+			.remove(); 
+
+		$('#btSubmit').remove(); 
+		$('#btAdd')
+			.removeAttr('disabled') 
+			.attr('class', 'bt');
+	}
+});
+
+// REMOVE ALL THE ELEMENTS IN THE CONTAINER.
+$('#btRemoveAll').click(function() {
+	$(container)
+		.empty()
+		.remove(); 
+
+	$('#btSubmit').remove(); 
+	iCnt = 0; 
+	
+	$('#btAdd')
+		.removeAttr('disabled') 
+		.attr('class', 'bt');
+});
+});
+
+// PICK THE VALUES FROM EACH TEXTBOX WHEN "SUBMIT" BUTTON IS CLICKED.
+var divValue, values = '';
+
+function GetTextValue() {
+$(divValue) 
+	.empty() 
+	.remove(); 
+
+values = '';
+
+$('.input').each(function() {
+	divValue = $(document.createElement('div')).css({
+		padding:'5px', width:'200px'
+	});
+	values += this.value + '<br />'
+});
+
+$(divValue).append('<p><b> <u> Degrees You Entered! </u></b></p>' + values);
+$('body').append(divValue);
+}
+
+$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+   
+    var x = 1; //initlal text box count
+	
+	
+   $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+	
+		     //text box increment
+            $(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            x++; 
+	  }
+    });
+   
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+       
+		e.preventDefault(); 
+		$(this).parent('div').remove(); 
+		x--;
+    })
+});
+
+
+</script>
+</body>
+</html>

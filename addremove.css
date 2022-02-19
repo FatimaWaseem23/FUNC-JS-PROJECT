@@ -1,0 +1,44 @@
+
+.addremovesection{
+    width: 400px;
+   
+    margin: 40px auto;
+    
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(73, 70, 64);
+    box-shadow: 0px 10px 40px 0px rgba(47,47,47,.1);
+}
+
+input[type="text"]
+{
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #0a0a0a;
+    width: 274px;
+    color:black;
+
+}
+input[type="text"]:focus{
+    outline: none;
+}
+.controls{
+    width:294px;
+    margin:15px auto;
+    color: #42A8BF;
+}
+#remove {
+    float:right;
+
+}
+.controls a i.fa-minus
+{
+    margin-right: 5px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ 
